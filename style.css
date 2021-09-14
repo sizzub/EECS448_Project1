@@ -1,0 +1,86 @@
+button {
+    position:absolute;
+    top: 625px;
+    left: 550px;
+}
+
+h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+h4 {
+    position: absolute;
+    top:55px;
+    left: 140px;
+}
+
+.Title {
+    position: absolute;
+    top: 35px;
+    left:500px;
+}
+
+.Title > h1 {
+    color: gray
+}
+.boardContainer {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    position:absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.letterDivider {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    top: 110px;
+    left: 145px;
+    gap: 100px;
+}
+
+.letterContainer {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.numberDivider {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    position: absolute;
+    top: 145px;
+    left: 115px;
+    gap: 555px;
+}
+
+.numberContainer{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+.board {
+    width:500px;
+    height: 450px;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 30px;
+}
+
+img{
+    border-style: inset;
+    border-color: black;
+    border-width: 1px;
+}
