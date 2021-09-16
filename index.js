@@ -25,6 +25,73 @@ function rotate(arr, width, height) {
     return tempArr;
 }
 
+function validPlacement(arr, x, y, shipSize, orientation) {
+    //returns bool for whether or not the given coordinate in the array is a valid placement for a ship
+    //returns bool for whether or not the placement is valid
+    //true = valid; false = invalid
+    if (shipSize < 2) {
+        return(get(arr, x, y) < 2);
+    }
+    else {
+        if (orienation == 0) {
+            //north placement
+            if (y > shipSize-1 && y < 9) {
+                for (let i = 0; i < shipSize; i++) {
+                    if (get(arr, x, y-i) > 2) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (orienation == 1) {
+            //east placement
+            if (x < 10-(shipSize-1) && x >= 0) {
+                for (let i = 0; i < shipSize; i++) {
+                    if (get(arr, x+i, y) > 2) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (orienation == 2) {
+            //south placement
+            if (y < 9-(shipSize-1) && y >= 0) {
+                for (let i = 0; i < shipSize; i++) {
+                    if (get(arr, x, y+i) > 2) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (orienation == 3) {
+            //west placement
+            if (x > shipSize-1 && x < 10) {
+                for (let i = 0; i < shipSize; i++) {
+                    if (get(arr, x-i, y) > 2) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}
+
 function validAttack(arr, x, y) {
     //only needed for players that are dumb
     //returns bool for whether or not the given coordinate in the array has already been attacked
